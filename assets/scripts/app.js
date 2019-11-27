@@ -1,11 +1,4 @@
-var userInput = 12;
+const defaultResult = 0;
+let currentResult = defaultResult;
 
-var result;
-
-result = userInput + 18;
-
-result -= 10;
-result *= 2;
-result /= 5;
-
-alert(result);
+outputResult(null, '');
