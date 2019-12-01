@@ -4,32 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Basics</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/styles/app.css" />
+    <title>Assignment - Functions</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>The Unconventional Calculator</h1>
-    </header>
-
-    <section id="calculator">
-      <input type="number" id="input-number" />
-      <div id="calc-actions">
-        <button type="button" id="btn-add">+</button>
-        <button type="button" id="btn-subtract">-</button>
-        <button type="button" id="btn-multiply">*</button>
-        <button type="button" id="btn-divide">/</button>
-      </div>
-    </section>
-    <section id="results">
-      <h2 id="current-calculation">0</h2>
-      <h2>Result: <span id="current-result">0</span></h2>
-    </section>
-    <script src="assets/scripts/vendor.js"></script>
-    <script src="assets/scripts/app.js"></script>
+    <h1>Assignment - Functions</h1>
+    <ol>
+      <li>
+        Create two new functions: One that takes no parameters and simply shows
+        an <code>alert()</code> with some text of your choice and one that
+        receives a name as a parameter and then uses <code>alert()</code> to
+        output that name.
+      </li>
+      <li>
+        Call both functions directly from your code.
+      </li>
+      <li id="task-3">
+        Add an event listener to <code>task3Element</code> and attach it to the
+        first function (the one without arguments). Click this task thereafter
+        to verify whether it works.
+      </li>
+      <li>
+        Add a brand-new function that takes three parameters (three strings,
+        give them any names you want) that returns one combined string (where the
+        three strings are concatenated).
+      </li>
+      <li>
+        Call that new function directly from your code and
+        <code>alert()</code> the result of that function.
+      </li>
+    </ol>
+    <script src="assignment.js"></script>
   </body>
 </html>
