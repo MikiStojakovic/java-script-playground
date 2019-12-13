@@ -46,6 +46,15 @@ function calculateResult(calculationType) {
     mathOperator = '/';
   }
 
+  if (
+    calculationType !== 'ADD' &&
+    calculationType !== 'SUBSTRACT' &&
+    calculationType != 'MULTIPLY' &&
+    calculationType !== 'DIVIDE'
+  ) {
+    return;
+  }
+
   createAndWriteOutput(mathOperator, initialResult, enteredNumber);
   writeToLog(calculationType, initialResult, enteredNumber, currentResult);
 }
