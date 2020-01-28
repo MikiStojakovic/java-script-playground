@@ -33,7 +33,7 @@ const getComputerChoice = () => {
   }
 };
 
-const getWinner = (computerChoice, playerChoice) => {
+const getWinner = (computerChoice, playerChoice = DEFULT_USER_CHOICE) => {
   if (computerChoice === playerChoice) {
     return RESULT_DRAW;
   } else if (
@@ -43,7 +43,7 @@ const getWinner = (computerChoice, playerChoice) => {
   ) {
     return RESULT_PLAYER_WINS;
   } else {
-    return RESULT_COMPUTER_WINS;
+    return;
   }
 };
 
@@ -56,10 +56,20 @@ startGameBtn.addEventListener('click', () => {
   const playerSelection = getPlayerChoice();
   console.log(playerSelection);
   const computerSelection = getComputerChoice();
+
+  let winner;
+  if (playerSelection) {
+    winner = getWinner(computerSelection, playerSelection);
+  } else {
+    winner = getWinner(computerSelection);
+  }
+
   const winner = getWinner(computerSelection, playerSelection);
   console.log(winner);
 
-  let message = `You picked ${playerSelection}, computer picked ${computerSelection}, therefore you `;
+  let message = `You picked ${
+    playerSelection ? playerSelection : DEFULT_USER_CHOICE
+  }, computer picked ${computerSelection}, therefore you `;
   if (winner === RESULT_DRAW) {
     message = message + 'had a draw.';
   } else if (winner === RESULT_PLAYER_WINS) {
