@@ -4,32 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Basics</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/styles/app.css" />
-    <script src="assets/scripts/vendor.js" defer></script>
-    <script src="assets/scripts/app.js" defer></script>
+    <title>Assignment - DOM Querying & Manipulation</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>The Unconventional Calculator</h1>
-    </header>
-
-    <section id="calculator">
-      <input type="number" id="input-number" />
-      <div id="calc-actions">
-        <button type="button" id="btn-add">+</button>
-        <button type="button" id="btn-subtract">-</button>
-        <button type="button" id="btn-multiply">*</button>
-        <button type="button" id="btn-divide">/</button>
-      </div>
-    </section>
-    <section id="results">
-      <h2 id="current-calculation">0</h2>
-      <h2>Result: <span id="current-result">0</span></h2>
-    </section>
+    <h1>Assignment - DOM Querying & Manipulation</h1>
+    <ol>
+      <li id="task-1">
+        Select this task (in two different ways at least!) and change the
+        background-color to black, text-color to white.
+      </li>
+      <li>
+        Change the document title (in <code>&lt;head&gt;&lt;/head&gt;</code>) to
+        "Assignment - Solved!". Use two different ways for getting access to the
+        <code>&lt;title&gt;</code> element: Via <code>querySelector</code> on
+        document and via <code>querySelector</code> on the certain property you
+        find in <code>document</code>.
+      </li>
+      <li>
+        Select the <code>&lt;h1&gt;</code> element on this page and change its
+        text to "Assignment - Solved!".
+      </li>
+    </ol>
+    <script src="assignment.js"></script>
   </body>
 </html>
