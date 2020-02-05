@@ -17,6 +17,10 @@ const showMovieModalHandler = () => {
   toggleBackdrop();
 };
 
+const closeMovieModalHandler = () => {
+  addMovieModal.classList.remove('visible');
+};
+
 const backdropClickHandler = () => {
   closeMovieModalHandler();
   cancelMovieDeletionModal();
@@ -77,6 +81,12 @@ const updateUI = () => {
   }
 };
 
+const deleteMovieHandler = movieId => {
+  deleteModal.classList.add('visible');
+  toggleBackdrop();
+  deleteMovie(movieId);
+};
+
 const deleteMovie = movieId => {
   let movieIndex = 0;
   for (const movie of movies) {
@@ -90,19 +100,9 @@ const deleteMovie = movieId => {
   listRoot.children[movieIndex].remove();
 };
 
-const closeMovieModal = () => {
-  addMovieModal.classList.remove('visible');
-};
-
 const cancelMovieDeletionModal = () => {
   toggleBackdrop();
   deleteModal.classList.remove('visible');
-};
-
-const deleteMovieHandler = movieId => {
-  deleteModal.classList.add('visible');
-  toggleBackdrop();
-  deleteMovie(movieId);
 };
 
 const renderNewMovieElement = (id, title, imageUrl, rating) => {
